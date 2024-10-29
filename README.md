@@ -30,18 +30,20 @@ L'objectif de cette application est de fournir une API REST simple permettant de
 ```properties
    ```
 
-3. **Configurer la base de données** :
+3. **Accéder à l'API** :
 ```bash
    mvn spring-boot:run
    ```
 4. **Configurer la base de données** :
 
-Une fois l'application démarrée, l'API est disponible à l'adresse http://localhost:8080.
+Une fois l'application démarrée, l'API est disponible à l'adresse http://localhost:9000.
+
+http://localhost:9000/h2-console.
+"H2 console available at '/h2-console'. Database available at '**jdbc:h2:mem:CODE-UNIQUE**'"
 
 ## 📖 Utilisation de l'API
 
 ### Endpoints Disponibles
-
 
 ### Exemples de Requêtes
 
