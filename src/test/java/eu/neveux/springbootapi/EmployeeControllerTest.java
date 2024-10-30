@@ -2,6 +2,7 @@ package eu.neveux.springbootapi;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -17,6 +18,15 @@ class EmployeeControllerTest {
     
     @Autowired
     public MockMvc mockMvc;
+
+
+    @Test
+    void testPostEmployees() throws Exception {
+
+        mockMvc.perform(get("/employees/1"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("firstName", is("Laurent")));
+    }
 
     @Test
     void testGetEmployees() throws Exception {

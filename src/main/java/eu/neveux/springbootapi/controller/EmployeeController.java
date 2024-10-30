@@ -27,6 +27,16 @@ public class EmployeeController {
     @GetMapping("/employees")
     public Iterable<Employee> getEmployees() {
         return employeeService.getEmployees();
-    }    
+    }
+
+    /**
+    * Read - Get one employee by id
+    * @param id - employee id
+    * @return - An Iterable object of Employee full filled
+    */
+    @GetMapping("/employees/{id}")
+    public Optional<Employee> getEmployee(@PathVariable Long id) {
+        return employeeService.getEmployee(id);
+    }
 
 }
